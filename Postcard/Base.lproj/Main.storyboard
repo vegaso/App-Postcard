@@ -75,6 +75,21 @@
                                     <rect key="frame" x="16" y="272" width="288" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK5-M2-lOx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.56219081524299552" blue="0.13546922707207454" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Send Mail">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="196" width="178" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMailButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ko5-Hb-39b"/>
+                                </connections>
+                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxG-4x-eaP">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -92,39 +107,35 @@
                                     <rect key="frame" x="16" y="234" width="288" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK5-M2-lOx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.56219081524299552" blue="0.13546922707207454" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Send Mail">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-Bm-efB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="41" y="196" width="178" height="30"/>
+                                    <rect key="frame" x="51" y="167" width="159" height="21"/>
                                 </variation>
-                                <connections>
-                                    <action selector="sendMailButtonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ko5-Hb-39b"/>
-                                </connections>
-                            </button>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="KUz-T2-7c5"/>
                                 <exclude reference="wze-Ye-QfI"/>
+                                <exclude reference="XK5-M2-lOx"/>
                                 <exclude reference="lxG-4x-eaP"/>
                                 <exclude reference="y0o-Vn-U8U"/>
-                                <exclude reference="XK5-M2-lOx"/>
+                                <exclude reference="QGr-Bm-efB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="KUz-T2-7c5"/>
                                 <include reference="wze-Ye-QfI"/>
+                                <include reference="XK5-M2-lOx"/>
                                 <include reference="lxG-4x-eaP"/>
                                 <include reference="y0o-Vn-U8U"/>
-                                <include reference="XK5-M2-lOx"/>
+                                <include reference="QGr-Bm-efB"/>
                             </mask>
                         </variation>
                     </view>
@@ -134,6 +145,7 @@
                         <outlet property="enterNameTextField" destination="y0o-Vn-U8U" id="VTR-eP-uhK"/>
                         <outlet property="mailButton" destination="XK5-M2-lOx" id="32M-QK-lTQ"/>
                         <outlet property="messageLabel" destination="lxG-4x-eaP" id="iSi-Rc-OZv"/>
+                        <outlet property="nameLabel" destination="QGr-Bm-efB" id="MKP-1V-m6u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
